@@ -42,7 +42,8 @@
   height: 25px;
   border-width: 0 0 1px 1px;
   border-style: solid;
-  border-color: var(--decorated-color); margin-block-start: 10px;
+  border-color: var(--decorated-color); 
+  margin-block-start: 10px;
 }
 
 .header__theme-menu {
@@ -97,7 +98,8 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px solid var(--main-color); outline-offset: 4px;
+  outline: 1px solid var(--main-color); 
+  outline-offset: 4px;
 }
 
 .header__theme-menu-button:hover {
@@ -113,7 +115,6 @@
 .header-name {
   color: var(--accent-color);
   font-weight: 700;
-  font-size: 116px;
   line-height: 82.5%;
   text-shadow: 4px 4px 0px var(--main-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -129,15 +130,15 @@
   font-size: 18px;
   line-height: 23.4px;
   background-color: var(--main-color);
-  margin-block-end: 20px;
+  margin-block-end: 20.1px;
 }
 
 .main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto;
   background: var(--main-bg-color); 
-  padding: 10px 10px;
+  padding: 12px 10px;
 }
 
 .main-title {
@@ -182,7 +183,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  margin-top: -20px;
+  margin-block-start: -20px;
 }
 
 .text {
@@ -192,7 +193,7 @@ a:hover {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23.5px;
+  line-height: 23.48px;
   color: var(--text-color);
   padding-block-start: 10px;
   padding-block-end: 20px;
@@ -219,7 +220,7 @@ a:hover {
   width: 100%;
   max-height: 100%;
   gap: 10px;
-  margin-block-start: 25px;
+  margin-block-start: 26.8px;
 }
 
 .image {
@@ -262,7 +263,8 @@ a:hover {
     margin: 10px;
   }
   .decorated-zone::after {
-    margin: 10px;
+    margin-block-end: 9px;
+    margin-inline-start: 10px;
   }
   .header__theme-menu::after {
     margin-top: 10px;
@@ -271,7 +273,7 @@ a:hover {
   .header-name {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     margin-inline-start: -10px;
-    padding-block-end: 160px;
+    padding-block-end: 162px;
   }
   .header-title {
     width: 100%;
@@ -285,7 +287,7 @@ a:hover {
     margin-inline-end: 17px;
   }
   .content:not(:nth-child(even)) {
-    padding-block-start: 70px;
+    padding-block-start: 69.8px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     column-gap: 15px;
@@ -299,19 +301,20 @@ a:hover {
     margin-block-start: -47px;
   } 
   .main {
-    padding: 10px 19px;
+    padding: 10px 18.2px;
   }
   .main-title {
     width: 90%;
     min-width: 472px;
     justify-self: start;
-    margin-inline-start: 2px;
+    margin-inline-start: 2.6px;
   }
   .text {
     min-width: 472px;
     width: 90%;
     justify-self: start;
-    margin-inline-start: 2px;
+    margin-inline-start: 2.6px;
+    margin-block-start: -0.1px;
   }
   .content:nth-child(even) .text {
     min-width: 728px;
@@ -323,20 +326,23 @@ a:hover {
     width: 50%;
   }
   .content:not(:first-of-type) {
-    padding-block-start: 78px;
+    padding-block-start: 78.9px;
   }
   .title_description {
     min-width: 472px;
     width: 90%;
     justify-self: start;
-    margin-inline-start: 2px;
+    margin-inline-start: 3px;
+    margin-block-end: -0.35px;
+
   }
   .image-content {
-    margin-block-start: 57px;
+    margin-block-start: 58.5px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 23px 1fr 1fr 1fr;
     gap: 20px;
     max-height: calc(100dvw * 1.071614583);
+    width: max(100% - 1.45px);
   }
   .image {
     object-fit: cover;
@@ -377,7 +383,8 @@ a:hover {
   }
   .footer-title {
     justify-self: center;
-    padding-block-end: 360px;
+    padding-block-start: 410px;
+    padding-block-end: 410px;
     margin-left: 0;
     font-size: 120px;
   }
@@ -427,14 +434,17 @@ a:hover {
   .content:nth-child(even) .main-title {
     min-width: 315px;
     width: 100%;
+    margin-inline-start: 1px;
   }
   .content:nth-child(even) .text {
     min-width: 315px;
     width: 100%;
+    margin-inline-start: 1px;
   }
   .text-title {
     max-width: 315px;
     width: 100%;
+    margin-inline-start: 1px;
   }
   .content:nth-child(odd) .main-title {
     min-width: 648.92px;
@@ -443,6 +453,7 @@ a:hover {
   .content:nth-child(odd) .text {
     min-width: 648.92px;
     width: 100%;
+    margin-inline-end: 2.6px;
   }
   .content:nth-child(odd) .title_description {
     min-width: 649px;
@@ -464,7 +475,8 @@ a:hover {
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 129.53px;
-  padding-block-end: 215px;
+  padding-block-start: 267px;
+  padding-block-end: 265px;
   }
 }
  
