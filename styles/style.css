@@ -233,8 +233,7 @@ a:hover {
   grid-template-rows: 1fr;
   padding: 40px 10px 10px 10px;
   background-color: var(--main-bg-color);
-  min-height: 668px;
-  
+  min-block-size: 100vh;
 }
 
 .footer-title {
