@@ -3,31 +3,35 @@
   --accent-color: #FFC2E6;
   --text-color: #353430;
   --main-color: #FF8DCB;
+  --bg-image-light: url("../images/cover-image-light.png");
   --main-bg-color: #fff1f7;
   --text-title-color: #353430;
   --hover-color:rgba(50, 49, 45, 0.4);
   --focus-color: #353430;
-  --decorated-color:rgba(50, 49, 45, 0.4);
+  --decorated-color: #353430;
+  --link-color: #353430;
 
   .header__theme-menu::before {
     display: none;
   }
+
   .header__theme-menu::after {
     display: none;
   }
-  .header__theme-menu-button_active {
-    outline: 1px solid var(--text-color);
-  } 
+
+  .header__theme-menu-button {
+    --main-color: #353430;
+  }
 }
 
 .theme-light .page {
   background-image: var(--bg-image-light);
+  background-color: var(--main-bg-color);
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --hover-color:rgba(255, 0, 112, 0.4); 
-    --focus-color: #ff0070;
-    --decorated-color:rgba(50, 49, 45, 0.4);
+    --bg-image-light: url("../images/cover-image-light.png");
+    --main-bg-color: #fff1f7;
   }
 }
