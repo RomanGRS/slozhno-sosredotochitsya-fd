@@ -7,7 +7,7 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed; 
-  min-height: 6770px;
+  /*min-height: 6770px;*/
   max-height: 100vh;
 }
 
@@ -43,7 +43,7 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  top: 633px;
+  bottom: 10px;
   left: 10px;
   width: 25px;
   height: 25px;
@@ -166,7 +166,7 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-.link:visible {
+.link:focus {
   outline: none;
 }
 
@@ -182,7 +182,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  padding-block-end: 40px;
+  padding-block-end: 20px;
   padding-block-start: 29.4px;
   min-width: 355px;
   width: 100%;
@@ -199,7 +199,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  margin-block-start: -20px;
   gap: 20px;
 }
 
@@ -258,11 +257,11 @@
 
 .footer {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: auto;
   position: relative;
   justify-content: center;
-  padding: 40px 10px 10px 10px;
-  max-block-size: 668px;
+  align-content: center;
+  min-block-size: 668px;
 }
 
 .decorated-zone_footer::before {
@@ -272,7 +271,7 @@
 
 .decorated-zone_footer::after {
   position: absolute;
-  top: 673px;
+  bottom: 10px;
 }
 
 .footer-title {
@@ -282,14 +281,10 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
   text-shadow: 2px 2px 0px var(--main-color);
-  grid-row: 3;
+  margin-block-start: 80px;
 }
 
 @media (width >= 768px) {
-
-  .page {
-    min-height: 5850px;
-  }
 
   .header {
     justify-content: normal;
@@ -306,8 +301,8 @@
   }
 
   .decorated-zone::after {
-    margin-block-start: 345px;
-    margin-inline-start: 10px;
+    bottom: 20px;
+    left: 20px;
   }
 
   .header__theme-menu::after {
@@ -338,7 +333,7 @@
   }
 
   .content {
-    padding-block-start: 69px;
+    padding-block-start: 49px;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     column-gap: 15px;
@@ -348,13 +343,13 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    padding-block-start: 81px;
+    padding-block-start: 61px;
   }
 
   .text-title {
     min-width: 236px;
     max-width: 30%;
-    margin-block-start: -49px;
+    padding-block-start: 0;
   } 
   
   .main-title {
@@ -383,7 +378,7 @@
   }
 
   .content_to-concentrate {
-    padding-block-start: 81px;
+    padding-block-start: 61px;
   }
 
   .text-content_to-concentrate {
@@ -445,6 +440,7 @@
 
   .footer {
     min-height: 1024px;
+    margin-block-start: 20px;
   }
 
   .footer-decorated {
@@ -452,24 +448,19 @@
   }
 
   .decorated-zone_footer::before {
-    top: 69px;
+    top: 49px;
   }
   
   .decorated-zone_footer::after {
-    top: 694px;
+    bottom: 0;
   }
 
   .footer-title {
-    font-size: 120px;
-    grid-row: 2;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 }
 
 @media (width >= 1024px) {
-
-  .page {
-    min-height: 5008px;
-  }
 
   .header {
     justify-content: normal;
@@ -512,29 +503,32 @@
   }
   
   .decorated-zone::after {
-    top: 379px;
+    bottom: 20px;
+  }
+
+  .content {
+    gap: 7px;
   }
 
   .content .main-title {
     width: max(100%, 648.92px);
     justify-self: start;
-    margin-inline-start: -3px;
+    
   }
 
   .content .text {
     width: max(100%, 648.92px);
     justify-self: start;
-    margin-inline-start: -3px; 
+    
   }
 
   .content .title_description {
     width: min(100%, 648.92px);
     justify-self: start;
-    margin-inline-start: -3px;
   }
 
   .content_concentration {
-    margin-block-start: 20px;
+    gap: 0;
   }
 
   .content_concentration .main-title {
@@ -556,7 +550,7 @@
   }
 
   .content_to-concentrate {
-    margin-block-start: -2px;
+    margin: 0;
   }
 
   .text-content_to-concentrate {
@@ -593,20 +587,17 @@
   }
 
   .footer {
-    grid-template-rows: 1fr 216px 1fr;
+    grid-template-rows: auto;
     min-height: 768px;
   }
 
   .footer-title {
-  font-weight: 700;
-  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  line-height: 129.53px;
-  align-self: end;
-  
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 129.53px;
   }
 
   .decorated-zone_footer::after {
-    top: 438px;
+    bottom: 10px;
   }
 }
  
